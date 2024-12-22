@@ -1,0 +1,21 @@
+spring:
+ application:
+  name: "config"
+ profiles:
+  active: native
+  #active: git
+ cloud:
+  server:
+   native:
+    search-locations: "classpath:/config"
+    #search-locations: "file:///Users//download//config"
+   #git:
+    #uri: "https://github.com/narendar/config-git"
+    #default-label: main
+    #timeout: 7
+    #clone-on-start: true
+    #force-pull: true
+server:
+ port: 8091
+encrypt:
+ key: "be53d9440104abdf8318867ac8818193a" 
