@@ -1,0 +1,28 @@
+spring:
+ application:
+  name: "employee"
+ datasource:
+  url: "jdbc:mysql://127.0.0.2:3306/employee_service"
+  driver-class: "com.mysql.cj.jdbc.Driver"
+  #to encrypt data 
+  username: "{cipher}cdc8ab2ff34af9d4c721653dd014c70da383dc653691642b070574c0cf72aac7"
+  password: "root"
+ jpa:
+  properties:
+   hibernate:
+    dialect: "org.hibernate.dialect.MySQLDialect" 
+  hibernate:
+   ddl-auto: none
+   show-sql: true
+server:
+ port: 8083
+logging:
+ level:
+  org:
+   springframework:
+    jdbc:
+     datasource:
+      init:
+       ScriptUtils: debug
+employee:
+ status: "ACTIVE"
